@@ -1,20 +1,23 @@
-# About
+# About Me
 
-I am Sample Person, an AI engineer. I build systems that put language models
-into production: retrieval pipelines, evaluation harnesses, and the plumbing
-that keeps them honest once real users arrive.
+## Who I am
 
-I am based in Bangalore, India, and I work remotely. I am comfortable across
-the stack, but my centre of gravity is the backend: Python services, retrieval,
-and the measurement layer that tells you whether a change helped or hurt.
+I am Uma, a Senior AI Engineer based in Nottingham, UK. I have 11+ years in tech:
+4+ years in Big Data engineering and 2+ years building agentic and GenAI systems
+in production.
 
-Before moving into AI work I spent three years as a full stack developer, which
-is where I learned that most production failures are boring: a missing index, a
-silent retry, a config value nobody reviewed.
+## How I got here
 
-I studied computer science and finished with a focus on machine learning. My
-dissertation looked at how retrieval quality limits what a language model can
-do, which turned out to be the most useful thing I learned.
+I started as a Big Data and Java engineer, building Spark and Hive pipelines for data transformations and storage at Standard Chartered Bank. I moved into AI to stay ahead of where technology is heading, and because I wanted to build applications end to end: from data and retrieval, through the model and agent logic, to the interface people actually use. Big Data gave me a strong foundation in reliable pipelines, and AI let me take that further into products that reason, respond and deliver value directly to users.
 
-What I want next is a role where the evaluation story matters as much as the
-demo. I am happiest on a team that measures things.
+## What I care about
+
+Systems that are measurable. I would rather ship a simple retrieval pipeline with an evaluation gate than a complex agent nobody can debug. I think in tradeoffs: cost, latency, accuracy and production risk.
+
+## What I am looking for
+
+Senior Agentic AI Engineer roles where I can design and own multi-agent systems,
+RAG pipelines and the evaluation around them. I am also open to customer-facing
+or stakeholder-facing roles, such as Forward Deployed or Applied AI Engineer,
+where I can work directly with users to understand their problems and turn them
+into working AI solutions.

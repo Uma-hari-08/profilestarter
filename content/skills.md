@@ -2,31 +2,19 @@
 
 ## Languages
 
-Python is my main language and the one I am fastest in. JavaScript second,
-mostly for front ends and serverless functions. SQL well enough to read a query
-plan and fix the obvious problem.
+Python is my main language and worked with: FastAPI, asyncio,
+dataclasses, Pydantic and LLM SDKs. Scala and Java from my Big Data years. SQL well enough to write complex Hive and Spark SQL for reconciliation work.
+JavaScript for front ends and serverless functions.
 
-## Retrieval and evaluation
+## Agentic AI
 
-Chunking strategies and why they matter more than people expect. Keyword versus
-dense retrieval, and when the cheaper one is good enough. Cosine similarity.
-Building labelled evaluation sets. Inter annotator agreement with Cohen's
-kappa. LLM as judge, including the part where you check the judge against human
-labels before trusting it.
+Multi-agent orchestration with LangGraph and LangChain. I have also used CrewAI and, in hindsight, prefer LangGraph when a workflow needs explicit state,deterministic routing and human-in-the-loop escalation. Tool calling, context management and structured outputs.
 
-## Infrastructure
+## Data engineering
 
-Vercel and Render for deployment. PostgreSQL, including Neon. GitHub Actions
-for CI. Docker to the level of writing a working Dockerfile, not to the level
-of running a cluster.
+Spark, Hive, Sqoop, Oozie. Batch pipelines, data validation and reconciliation
+for regulated environments.
 
-## Models and tools
+## Tools
 
-Groq for inference. Langfuse for tracing and scoring. scikit-learn for
-classical baselines, which are still the right first move more often than not.
-
-## What I am still learning
-
-Agent frameworks beyond simple tool calling. I have built tool loops by hand
-and want to understand what the frameworks actually buy you. Also Kubernetes,
-which I keep deferring.
+Claude Code as an AI coding agent for scaffolding, testing and debugging. Git and GitHub.

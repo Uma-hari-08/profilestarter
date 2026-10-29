@@ -1,6 +1,6 @@
 {
  "strategy": "heading",
- "built_at": "2026-10-23T13:35:38Z",
+ "built_at": "2026-10-29T11:13:00Z",
  "files": [
   "about.md",
   "experience.md",
@@ -10,87 +10,108 @@
  "chunks": [
   {
    "file": "about.md",
-   "heading": "about",
-   "text": "I am Sample Person, an AI engineer. I build systems that put language models into production: retrieval pipelines, evaluation harnesses, and the plumbing that keeps them honest once real users arrive.\n\nI am based in Bangalore, India, and I work remotely. I am comfortable across the stack, but my centre of gravity is the backend: Python services, retrieval, and the measurement layer that tells you whether a change helped or hurt.\n\nBefore moving into AI work I spent three years as a full stack developer, which is where I learned that most production failures are boring: a missing index, a silent retry, a config value nobody reviewed.\n\nI studied computer science and finished with a focus on machine learning. My dissertation looked at how retrieval quality limits what a language model can do, which turned out to be the most useful thing I learned.\n\nWhat I want next is a role where the evaluation story matters as much as the demo. I am happiest on a team that measures things.",
+   "heading": "Who I am",
+   "text": "Who I am. I am Uma, a Senior AI Engineer based in Nottingham, UK. I have 11+ years in tech: 4+ years in Big Data engineering and 2+ years building agentic and GenAI systems in production.",
    "id": "about-1",
-   "chars": 985
+   "chars": 187
+  },
+  {
+   "file": "about.md",
+   "heading": "How I got here",
+   "text": "How I got here. I started as a Big Data and Java engineer, building Spark and Hive pipelines for data transformations and storage at Standard Chartered Bank. I moved into AI to stay ahead of where technology is heading, and because I wanted to build applications end to end: from data and retrieval, through the model and agent logic, to the interface people actually use. Big Data gave me a strong foundation in reliable pipelines, and AI let me take that further into products that reason, respond and deliver value directly to users.",
+   "id": "about-2",
+   "chars": 536
+  },
+  {
+   "file": "about.md",
+   "heading": "What I care about",
+   "text": "What I care about. Systems that are measurable. I would rather ship a simple retrieval pipeline with an evaluation gate than a complex agent nobody can debug. I think in tradeoffs: cost, latency, accuracy and production risk.",
+   "id": "about-3",
+   "chars": 225
+  },
+  {
+   "file": "about.md",
+   "heading": "What I am looking for",
+   "text": "What I am looking for. Senior Agentic AI Engineer roles where I can design and own multi-agent systems, RAG pipelines and the evaluation around them. I am also open to customer-facing or stakeholder-facing roles, such as Forward Deployed or Applied AI Engineer, where I can work directly with users to understand their problems and turn them into working AI solutions.",
+   "id": "about-4",
+   "chars": 368
   },
   {
    "file": "experience.md",
-   "heading": "AI Engineer, Northwind Data (2024 to present)",
-   "text": "AI Engineer, Northwind Data (2024 to present). I own the retrieval layer of a customer support assistant that handles about four thousand conversations a week. When I joined, the assistant answered from a single flat prompt and nobody could say how often it was right.\n\nI built the first evaluation harness: a set of 120 labelled questions, scored automatically on every deploy. The first run told us we were at 61 percent. Within two months we were at 84 percent, and the thing that moved the number was not the model. It was chunking. Splitting documents on headings instead of on a fixed character count was worth 14 points on its own.\n\nI also added a refusal path. The assistant now says it does not know rather than inventing a policy, which cut escalations from the support team by a third.",
+   "heading": "Senior AI Engineer, EdTech platforms (2+ years)",
+   "text": "Senior AI Engineer, EdTech platforms (2+ years). Built production GenAI and agentic systems for EdTech products: a multi-agent support triage system and a RAG-based Learning Assistant involving Langchain, langgraph. Used  Agentic AI frameworks like Crew AI, - Designed multi-agent workflows with LangGraph and LangChain, using Pydantic structured outputs so every agent returns typed, checkable results. - Built RAG pipelines with hybrid retrieval (BM25 plus dense vectors, merged with Reciprocal Rank Fusion) and cross-encoder reranking. - Added evaluation as a CI gate using RAGAS and DeepEval, so a drop in answer quality blocks a release. - Built FastAPI services with async concurrency for parallel LLM calls, retries and rate-limit handling. - Handled observability with LangSmith and Langfuse tracing. - Worked on deployment to Azure AKS with KEDA autoscaling. A separate DevOps engineer owned the cluster; I configured and deployed the services.",
    "id": "experience-1",
-   "chars": 796
+   "chars": 953
   },
   {
    "file": "experience.md",
-   "heading": "Full Stack Developer, Harbour Systems (2021 to 2024)",
-   "text": "Full Stack Developer, Harbour Systems (2021 to 2024). I worked on an internal logistics dashboard used by about two hundred staff. Python on the back, React on the front, PostgreSQL underneath.\n\nThe work I am proudest of is unglamorous: I replaced a nightly batch job that regularly failed silently with an incremental pipeline that reported its own health. Support tickets about stale data went from roughly fifteen a month to almost none.\n\nI was also the person who introduced tests to that codebase. Not many, and not quickly, but enough that the next person could change things without fear.",
+   "heading": "Big Data Engineer, Standard Chartered Bank (4+ years)",
+   "text": "Big Data Engineer, Standard Chartered Bank (4+ years). Built data transformations pipelines and regulatory reporting pipelines over large-scale banking data.\n\n- Spark, Scala and Hive for transformations, aggregations and reconciliation. - Sqoop for ingestion and Oozie for scheduling. - Focus on data accuracy, reconciliation and on-time submission for compliance and audit.",
    "id": "experience-2",
-   "chars": 595
+   "chars": 374
   },
   {
    "file": "experience.md",
-   "heading": "Intern, Harbour Systems (2021)",
-   "text": "Intern, Harbour Systems (2021). Six months writing internal tooling. Mostly scripts. It taught me to read other people's code, which is most of the job.",
+   "heading": "Earlier experience",
+   "text": "Earlier experience. Java and data engineering roles that built my foundation in backend systems.",
    "id": "experience-3",
-   "chars": 152
+   "chars": 96
   },
   {
    "file": "projects.md",
-   "heading": "News triage assistant",
-   "text": "News triage assistant. A classifier and triage app for news items. It sorts an item into one of four categories, decides whether a question needs explaining or refusing, retrieves a relevant note from a small knowledge base, and records every run so the behaviour can be scored afterwards.\n\nThe interesting part is the config file. The prompt, the routing rules, the guardrails and the retrieval settings all live in one place in plain language, so changing behaviour does not mean changing code. I built it that way after watching non-engineers be unable to contribute to a system they understood perfectly well.\n\nScored 56.7 percent accuracy with a Cohen's kappa of 0.42 on the first pass. After fixing the prompt to name all four categories and to say what to do when two categories both fit, it went to 83 percent.\n\nStack: Python, Gradio, SQLite, Groq.",
+   "heading": "Agentic Support Triage System (EdTech)",
+   "text": "Agentic Support Triage System (EdTech). Automatically classifies and routes student support tickets: app bugs, loginfailures, payment issues, content errors and exam queries.\n\n- Agents assign severity, gather context from logs, retrieve answers from a knowledge base, and escalate high-risk cases to a human. - Built with LangGraph and LangChain, Pydantic structured outputs, Pinecone for retrieval, FastAPI and Redis. - Hardest problems: non-deterministic escalation, context overflow in long tickets, and observability gaps. Fixed with explicit state, typed outputs and tracing.",
    "id": "projects-1",
-   "chars": 856
+   "chars": 580
   },
   {
    "file": "projects.md",
-   "heading": "Text classification from scratch",
-   "text": "Text classification from scratch. A news topic classifier built without a framework: hand labelling, inter annotator agreement, TF-IDF features, logistic regression, confusion matrix.\n\nTwo things surprised me. First, my own labels disagreed with a second labeller about one time in five, which puts a hard ceiling on any accuracy claim. Second, a deliberately leaky split scored 1.000 on a 200 row pool, which is how I learned to be suspicious of a perfect number.\n\nStack: Python, scikit-learn, pandas.",
+   "heading": "EdTech Learning Assistant (RAG)",
+   "text": "EdTech Learning Assistant (RAG). A study assistant that answers learner questions from course material.\n\n-  OCR pipeline to turn scanned material into searchable text. - Hybrid retrieval with BM25 and dense embeddings, merged with RRF, then cross-encoder reranking. - RAGAS evaluation gates in CI. - An ML engineer on the team owned the classification models; I integrated their outputs into the pipeline.",
    "id": "projects-2",
-   "chars": 502
+   "chars": 405
   },
   {
    "file": "projects.md",
-   "heading": "This portfolio",
-   "text": "This portfolio. The site you are reading. A static page with a chat box that answers questions about me from my own notes. Retrieval runs in the browser, generation runs in a serverless function so the API key never reaches the client.\n\nStack: HTML, CSS, JavaScript, Vercel Functions, Groq.",
+   "heading": "This portfolio chatbot",
+   "text": "This portfolio chatbot. A live chat that answers questions about my experience, grounded in these notes.\n\n- Retrieval over my own markdown files, answers generated with the Groq API. - Guard layer to keep answers on topic and grounded. - Evaluation set measuring retrieval hit rate and answer correctness separately. - Deployed on Vercel with serverless functions.",
    "id": "projects-3",
-   "chars": 290
+   "chars": 364
+  },
+  {
+   "file": "projects.md",
+   "heading": "Smaller builds",
+   "text": "Smaller builds. - File Organiser Agent: a Python agent for practising tool use. - Meal planning web app in Python. - Story generation for special needs kids",
+   "id": "projects-4",
+   "chars": 156
   },
   {
    "file": "skills.md",
    "heading": "Languages",
-   "text": "Languages. Python is my main language and the one I am fastest in. JavaScript second, mostly for front ends and serverless functions. SQL well enough to read a query plan and fix the obvious problem.",
+   "text": "Languages. Python is my main language and worked with: FastAPI, asyncio, dataclasses, Pydantic and LLM SDKs. Scala and Java from my Big Data years. SQL well enough to write complex Hive and Spark SQL for reconciliation work. JavaScript for front ends and serverless functions.",
    "id": "skills-1",
-   "chars": 199
+   "chars": 276
   },
   {
    "file": "skills.md",
-   "heading": "Retrieval and evaluation",
-   "text": "Retrieval and evaluation. Chunking strategies and why they matter more than people expect. Keyword versus dense retrieval, and when the cheaper one is good enough. Cosine similarity. Building labelled evaluation sets. Inter annotator agreement with Cohen's kappa. LLM as judge, including the part where you check the judge against human labels before trusting it.",
+   "heading": "Agentic AI",
+   "text": "Agentic AI. Multi-agent orchestration with LangGraph and LangChain. I have also used CrewAI and, in hindsight, prefer LangGraph when a workflow needs explicit state,deterministic routing and human-in-the-loop escalation. Tool calling, context management and structured outputs.",
    "id": "skills-2",
-   "chars": 363
+   "chars": 277
   },
   {
    "file": "skills.md",
-   "heading": "Infrastructure",
-   "text": "Infrastructure. Vercel and Render for deployment. PostgreSQL, including Neon. GitHub Actions for CI. Docker to the level of writing a working Dockerfile, not to the level of running a cluster.",
+   "heading": "Data engineering",
+   "text": "Data engineering. Spark, Hive, Sqoop, Oozie. Batch pipelines, data validation and reconciliation for regulated environments.",
    "id": "skills-3",
-   "chars": 192
+   "chars": 124
   },
   {
    "file": "skills.md",
-   "heading": "Models and tools",
-   "text": "Models and tools. Groq for inference. Langfuse for tracing and scoring. scikit-learn for classical baselines, which are still the right first move more often than not.",
+   "heading": "Tools",
+   "text": "Tools. Claude Code as an AI coding agent for scaffolding, testing and debugging. Git and GitHub.",
    "id": "skills-4",
-   "chars": 167
-  },
-  {
-   "file": "skills.md",
-   "heading": "What I am still learning",
-   "text": "What I am still learning. Agent frameworks beyond simple tool calling. I have built tool loops by hand and want to understand what the frameworks actually buy you. Also Kubernetes, which I keep deferring.",
-   "id": "skills-5",
-   "chars": 204
+   "chars": 96
   }
  ]
 }

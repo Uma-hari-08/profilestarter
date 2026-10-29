@@ -1,40 +1,33 @@
 # Projects
 
-## News triage assistant
+## Agentic Support Triage System (EdTech)
 
-A classifier and triage app for news items. It sorts an item into one of four
-categories, decides whether a question needs explaining or refusing, retrieves
-a relevant note from a small knowledge base, and records every run so the
-behaviour can be scored afterwards.
+Automatically classifies and routes student support tickets: app bugs, loginfailures, payment issues, content errors and exam queries.
 
-The interesting part is the config file. The prompt, the routing rules, the
-guardrails and the retrieval settings all live in one place in plain language,
-so changing behaviour does not mean changing code. I built it that way after
-watching non-engineers be unable to contribute to a system they understood
-perfectly well.
+- Agents assign severity, gather context from logs, retrieve answers from a knowledge base, and escalate high-risk cases to a human.
+- Built with LangGraph and LangChain, Pydantic structured outputs, Pinecone for retrieval, FastAPI and Redis.
+- Hardest problems: non-deterministic escalation, context overflow in long tickets, and observability gaps. Fixed with explicit state, typed outputs and tracing.
 
-Scored 56.7 percent accuracy with a Cohen's kappa of 0.42 on the first pass.
-After fixing the prompt to name all four categories and to say what to do when
-two categories both fit, it went to 83 percent.
+## EdTech Learning Assistant (RAG)
 
-Stack: Python, Gradio, SQLite, Groq.
+A study assistant that answers learner questions from course material.
 
-## Text classification from scratch
+-  OCR pipeline to turn scanned material into searchable text.
+- Hybrid retrieval with BM25 and dense embeddings, merged with RRF, then cross-encoder reranking.
+- RAGAS evaluation gates in CI.
+- An ML engineer on the team owned the classification models; I integrated their outputs into the pipeline.
 
-A news topic classifier built without a framework: hand labelling, inter
-annotator agreement, TF-IDF features, logistic regression, confusion matrix.
+## This portfolio chatbot
 
-Two things surprised me. First, my own labels disagreed with a second labeller
-about one time in five, which puts a hard ceiling on any accuracy claim.
-Second, a deliberately leaky split scored 1.000 on a 200 row pool, which is how
-I learned to be suspicious of a perfect number.
+A live chat that answers questions about my experience, grounded in these notes.
 
-Stack: Python, scikit-learn, pandas.
+- Retrieval over my own markdown files, answers generated with the Groq API.
+- Guard layer to keep answers on topic and grounded.
+- Evaluation set measuring retrieval hit rate and answer correctness separately.
+- Deployed on Vercel with serverless functions.
 
-## This portfolio
+## Smaller builds
 
-The site you are reading. A static page with a chat box that answers questions
-about me from my own notes. Retrieval runs in the browser, generation runs in a
-serverless function so the API key never reaches the client.
-
-Stack: HTML, CSS, JavaScript, Vercel Functions, Groq.
+- File Organiser Agent: a Python agent for practising tool use.
+- Meal planning web app in Python.
+- Story generation for special needs kids 

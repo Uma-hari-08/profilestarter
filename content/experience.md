@@ -1,34 +1,24 @@
 # Experience
 
-## AI Engineer, Northwind Data (2024 to present)
+## Senior AI Engineer, EdTech platforms (2+ years)
 
-I own the retrieval layer of a customer support assistant that handles about
-four thousand conversations a week. When I joined, the assistant answered from
-a single flat prompt and nobody could say how often it was right.
+Built production GenAI and agentic systems for EdTech products: a multi-agent support triage system and a RAG-based Learning Assistant involving Langchain, langgraph. Used  Agentic AI frameworks like Crew AI, 
+- Designed multi-agent workflows with LangGraph and LangChain, using Pydantic structured outputs so every agent returns typed, checkable results.
+- Built RAG pipelines with hybrid retrieval (BM25 plus dense vectors, merged with Reciprocal Rank Fusion) and cross-encoder reranking.
+- Added evaluation as a CI gate using RAGAS and DeepEval, so a drop in answer quality blocks a release.
+- Built FastAPI services with async concurrency for parallel LLM calls, retries and rate-limit handling.
+- Handled observability with LangSmith and Langfuse tracing.
+- Worked on deployment to Azure AKS with KEDA autoscaling. A separate DevOps engineer owned the cluster; I configured and deployed the services.
 
-I built the first evaluation harness: a set of 120 labelled questions, scored
-automatically on every deploy. The first run told us we were at 61 percent.
-Within two months we were at 84 percent, and the thing that moved the number
-was not the model. It was chunking. Splitting documents on headings instead of
-on a fixed character count was worth 14 points on its own.
+## Big Data Engineer, Standard Chartered Bank (4+ years)
 
-I also added a refusal path. The assistant now says it does not know rather
-than inventing a policy, which cut escalations from the support team by a third.
+Built data transformations pipelines and regulatory reporting pipelines over large-scale banking data.
 
-## Full Stack Developer, Harbour Systems (2021 to 2024)
+- Spark, Scala and Hive for transformations, aggregations and reconciliation.
+- Sqoop for ingestion and Oozie for scheduling.
+- Focus on data accuracy, reconciliation and on-time submission for compliance
+  and audit.
 
-I worked on an internal logistics dashboard used by about two hundred staff.
-Python on the back, React on the front, PostgreSQL underneath.
+## Earlier experience
 
-The work I am proudest of is unglamorous: I replaced a nightly batch job that
-regularly failed silently with an incremental pipeline that reported its own
-health. Support tickets about stale data went from roughly fifteen a month to
-almost none.
-
-I was also the person who introduced tests to that codebase. Not many, and not
-quickly, but enough that the next person could change things without fear.
-
-## Intern, Harbour Systems (2021)
-
-Six months writing internal tooling. Mostly scripts. It taught me to read other
-people's code, which is most of the job.
+Java and data engineering roles that built my foundation in backend systems.
